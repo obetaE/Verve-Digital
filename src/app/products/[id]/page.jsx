@@ -250,9 +250,39 @@ const ProductPage = () => {
         </section>
       </div>
 
-      {/* Footer (Same as Homepage) */}
       <footer className="bg-orange-900/20 text-orange-100">
-        {/* ... Include footer code from homepage ... */}
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-orange-300 text-xl font-bold mb-4">Verve Digital</h3>
+              <p className="text-sm">Preserving rock heritage since 1998</p>
+            </div>
+            <div>
+              <h4 className="text-orange-300 text-lg mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link href="/terms" className="hover:text-orange-400">Terms of Service</Link></li>
+                <li><Link href="/privacy" className="hover:text-orange-400">Privacy Policy</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-orange-300 text-lg mb-4">Support</h4>
+              <ul className="space-y-2">
+                <li>24/7 Support: 1-800-ROCK-123</li>
+                <li>Email: help@vervedigital.com</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-orange-300 text-lg mb-4">Newsletter</h4>
+              <div className="flex">
+                <input type="email" placeholder="Your email" className="p-2 rounded-l-lg flex-1 bg-gray-700" />
+                <button className="bg-orange-600 px-4 py-2 rounded-r-lg hover:bg-orange-700">Subscribe</button>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 pt-8 border-t border-orange-900 text-center">
+            <p>&copy; 2024 Verve Digital. All rights reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
