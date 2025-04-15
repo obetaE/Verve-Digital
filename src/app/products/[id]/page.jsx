@@ -1,4 +1,4 @@
-// app/products/[id]/page.jsx
+"use client"
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -52,7 +52,7 @@ const ProductPage = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
-                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                <Link href="/" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
                   Home
                 </Link>
                 <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
@@ -86,7 +86,7 @@ const ProductPage = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Image Gallery */}
           <div className="space-y-6">
-            <div className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden">
+            {/* <div className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden">
               <Image
                 src={mainImage}
                 alt={product.title}
@@ -94,7 +94,7 @@ const ProductPage = () => {
                 className="object-cover"
                 priority
               />
-            </div>
+            </div> */}
             <div className="grid grid-cols-3 gap-4">
               {product.images.map((image, index) => (
                 <button

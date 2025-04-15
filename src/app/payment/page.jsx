@@ -4,6 +4,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import MobileNav from "@/components/MobileNav"
 
 const PaymentPage = () => {
   const [paymentMethod, setPaymentMethod] = useState('credit-card');
@@ -42,9 +43,37 @@ const PaymentPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      {/* Navigation */}
       <nav className="bg-orange-900/30 backdrop-blur-sm sticky top-0 z-50">
-        {/* ... Same navigation code ... */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex-shrink-0 flex items-center">
+              <svg className="h-8 w-8 text-orange-400" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5" stroke="currentColor" strokeWidth="2" />
+              </svg>
+              <span className="ml-2 text-2xl font-bold text-orange-300">Verve Digital</span>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-6">
+                <Link href="/" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                  Home
+                </Link>
+                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                  Cart
+                </Link>
+                <Link href="/products" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                  Products
+                </Link>
+                <Link href="/about" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                  About
+                </Link>
+                <Link href="/contact" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                  Contact
+                </Link>
+              </div>
+            </div>
+            <MobileNav />
+          </div>
+        </div>
       </nav>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

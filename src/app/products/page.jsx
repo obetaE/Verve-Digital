@@ -9,7 +9,7 @@ const Products = () => {
       id: 1,
       title: "70s Rock Anthology",
       price: 29.99,
-      image: "/70s-anthology.jpg",
+      image: "https://images.pexels.com/photos/5749829/pexels-photo-5749829.jpeg?auto=compress&cs=tinysrgb&w=600",
       era: "1970s",
       tracks: 24,
       format: "Vinyl + Digital"
@@ -18,7 +18,7 @@ const Products = () => {
       id: 2,
       title: "Live at Wembley '75",
       price: 34.99,
-      image: "/live-wembley.jpg",
+      image: "https://images.pexels.com/photos/11367120/pexels-photo-11367120.jpeg?auto=compress&cs=tinysrgb&w=600",
       era: "1970s",
       tracks: 18,
       format: "2xLP Box Set"
@@ -27,7 +27,7 @@ const Products = () => {
       id: 3,
       title: "Studio Masterpieces",
       price: 27.99,
-      image: "/studio-master.jpg",
+      image: "https://images.pexels.com/photos/3430143/pexels-photo-3430143.jpeg?auto=compress&cs=tinysrgb&w=600",
       era: "1960s-1980s",
       tracks: 30,
       format: "3xCD Collection"
@@ -48,7 +48,7 @@ const Products = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
-                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                <Link href="/" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
                   Home
                 </Link>
                 <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">

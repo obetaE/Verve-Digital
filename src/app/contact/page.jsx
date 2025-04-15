@@ -17,7 +17,7 @@ export default function Contact() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
-                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                <Link href="/" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
                   Home
                 </Link>
                 <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
@@ -174,7 +174,8 @@ export default function Contact() {
             {/* Replace with actual map component or image */}
             <div className="relative h-96 bg-orange-900/20">
               <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-orange-200 text-lg">Map integration available with API key</p>
+                {/* <p className="text-orange-200 text-lg">Map integration available with API key</p> */}
+                <Image src="https://images.pexels.com/photos/14586964/pexels-photo-14586964.jpeg?auto=compress&cs=tinysrgb&w=600" alt="HQ" fill className='object-cover'/>
               </div>
             </div>
             <div className="p-8">

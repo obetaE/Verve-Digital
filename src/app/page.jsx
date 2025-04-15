@@ -17,7 +17,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
-                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                <Link href="/" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
                   Home
                 </Link>
                 <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">

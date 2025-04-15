@@ -17,7 +17,7 @@ export default function About() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
-                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                <Link href="/" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
                   Home
                 </Link>
                 <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
@@ -57,7 +57,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 rounded-xl overflow-hidden">
               <Image
-                src="/vinyl-records.jpg" // Add your image to public folder
+                src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600" // Add your image to public folder
                 alt="Vinyl record collection"
                 fill
                 className="object-cover"
@@ -124,19 +124,19 @@ export default function About() {
                 name: 'Michael Carter',
                 role: 'Founder & CEO',
                 bio: '40+ years in music preservation',
-                img: '/team-founder.jpg'
+                img: 'https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=600'
               },
               {
                 name: 'Sarah Johnson',
                 role: 'Customer Support',
                 bio: 'Dedicated senior care specialist',
-                img: '/team-support.jpg'
+                img: 'https://images.pexels.com/photos/1848565/pexels-photo-1848565.jpeg?auto=compress&cs=tinysrgb&w=600'
               },
               {
                 name: 'David Chen',
                 role: 'Audio Engineer',
                 bio: 'Grammy-winning restoration expert',
-                img: '/team-engineer.jpg'
+                img: 'https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=600'
               }
             ].map((member, index) => (
               <div key={index} className="bg-gray-700 rounded-xl p-6 text-center">
