@@ -17,7 +17,7 @@ const MobileNav = () => {
   ];
 
   return (
-    <div className="md:hidden">
+    <div className=" md:hidden">
 
       <button
         onClick={() => setIsOpen(true)}
@@ -29,10 +29,10 @@ const MobileNav = () => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
+        <div className="fixed h-full inset-0 z-50 bg-black/50 backdrop-blur-sm">
           {/* Menu Container */}
-          <div className="fixed inset-y-0 right-0 w-64 bg-gray-900 shadow-lg">
-            <div className="flex flex-col h-full p-4">
+          <div className="fixed right-0 w-64 bg-gray-900 shadow-lg">
+            <div className="bg-gray-900 flex flex-col h-full p-4">
               {/* Close Button */}
               <div className="flex justify-end mb-8">
                 <button
@@ -45,8 +45,8 @@ const MobileNav = () => {
               </div>
 
               {/* Navigation Links */}
-              <nav className="flex-1">
-                <ul className="space-y-6">
+              <nav className="flex-1 bg-gray-900">
+                <ul className="space-y-6 bg-gray-900">
                   {navigationItems.map((item) => (
                     <li key={item.name}>
                       <Link
@@ -62,7 +62,7 @@ const MobileNav = () => {
               </nav>
 
               {/* Branding Footer */}
-              <div className="mt-auto pt-6 border-t border-orange-900/50">
+              <div className="bg-gray-900 mt-auto pt-6 border-t border-orange-900/50">
                 <p className="text-sm text-orange-300">Verve Digital</p>
                 <p className="text-xs text-orange-100 mt-1">Since 1998</p>
               </div>
