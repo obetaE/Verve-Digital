@@ -1,6 +1,7 @@
 // app/products/page.jsx
 import Link from 'next/link';
 import Image from 'next/image';
+import MobileNav from '@/components/MobileNav';
 
 const Products = () => {
   const albums = [
@@ -47,7 +48,10 @@ const Products = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
-                <Link href="/products" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                  Home
+                </Link>
+                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
                   Cart
                 </Link>
                 <Link href="/products" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
@@ -61,6 +65,7 @@ const Products = () => {
                 </Link>
               </div>
             </div>
+            <MobileNav />
           </div>
         </div>
       </nav>

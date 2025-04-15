@@ -1,11 +1,11 @@
 // app/about/page.jsx
 import Link from 'next/link';
 import Image from 'next/image';
+import MobileNav from '@/components/MobileNav';
 
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-900">
-      {/* Navigation (Same as Homepage) */}
       <nav className="bg-orange-900/30 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -17,7 +17,10 @@ export default function About() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
-                <Link href="/products" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
+                  Home
+                </Link>
+                <Link href="/cart" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
                   Cart
                 </Link>
                 <Link href="/products" className="text-orange-100 hover:text-white px-3 py-2 text-lg font-medium">
@@ -31,6 +34,7 @@ export default function About() {
                 </Link>
               </div>
             </div>
+            <MobileNav />
           </div>
         </div>
       </nav>
