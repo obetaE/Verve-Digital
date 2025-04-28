@@ -43,7 +43,7 @@ const CartPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-900">
-     <nav className="bg-orange-900/30 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="bg-orange-900/30 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0 flex items-center">
@@ -78,11 +78,11 @@ const CartPage = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-orange-300 mb-8">Your Shopping Cart</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-orange-300 mb-8">Your Shopping Cart</h1>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
           {/* Cart Items */}
-          <div className="lg:col-span-2">
+          <div className="space-y-6">
             {cartItems.length === 0 ? (
               <div className="bg-gray-800 p-8 rounded-xl text-center">
                 <p className="text-orange-200 text-xl mb-4">Your cart is empty</p>
@@ -93,8 +93,8 @@ const CartPage = () => {
             ) : (
               <div className="space-y-6">
                 {cartItems.map(item => (
-                  <div key={item.id} className="bg-gray-800 rounded-xl p-6 flex gap-6">
-                    <div className="relative w-32 h-32 flex-shrink-0">
+                  <div key={item.id} className="bg-gray-800 rounded-xl p-4 md:p-6 flex flex-col md:flex-row gap-4 w-full">
+                    <div className="relative w-full md:w-32 h-32 flex-shrink-0">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -103,28 +103,31 @@ const CartPage = () => {
                       />
                     </div>
                     <div className="flex-1">
-                      <h2 className="text-xl font-semibold text-orange-300 mb-2">{item.title}</h2>
-                      <p className="text-orange-100 mb-2">{item.format}</p>
-                      <p className="text-2xl font-bold text-orange-400">${item.price}</p>
-                      
-                      <div className="mt-4 flex items-center gap-4">
-                        <label className="text-orange-200">Quantity:</label>
-                        <input
-                          type="number"
-                          value={item.quantity}
-                          onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
-                          className="w-20 p-2 bg-gray-700 text-orange-100 rounded-lg text-center"
-                          min="1"
-                        />
-                        <button
-                          onClick={() => removeItem(item.id)}
-                          className="text-orange-500 hover:text-orange-600 text-sm font-semibold"
-                          aria-label={`Remove ${item.title} from cart`}
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    </div>
+              <h2 className="text-lg md:text-xl font-semibold text-orange-300 mb-2">{item.title}</h2>
+              <p className="text-orange-100 text-sm md:text-base mb-2">{item.format}</p>
+              <p className="text-xl md:text-2xl font-bold text-orange-400">${item.price}</p>
+              
+              {/* Quantity Controls - Stack on mobile */}
+              <div className="mt-4 flex flex-col md:flex-row items-start md:items-center gap-4">
+                <label className="text-orange-200 text-sm md:text-base">Quantity:</label>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    value={item.quantity}
+                    onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                    className="w-20 p-2 bg-gray-700 text-orange-100 rounded-lg text-center"
+                    min="1"
+                  />
+                  <button
+                    onClick={() => removeItem(item.id)}
+                    className="text-orange-500 hover:text-orange-600 text-sm font-semibold"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+
                   </div>
                 ))}
               </div>
@@ -132,7 +135,7 @@ const CartPage = () => {
           </div>
 
           {/* Order Summary */}
-          <div className="bg-gray-800 rounded-xl p-6 h-fit sticky top-24">
+          <div className="bg-gray-800 rounded-xl p-6 h-fit lg:sticky lg:top-24">
             <h2 className="text-2xl font-bold text-orange-300 mb-6">Order Summary</h2>
             <div className="space-y-4">
               <div className="flex justify-between">
@@ -150,15 +153,15 @@ const CartPage = () => {
             </div>
 
             <div className="mt-8 space-y-4">
-              <button 
+              <button
                 className="w-full bg-orange-600 text-white py-4 rounded-xl text-xl hover:bg-orange-700 transition-colors"
                 disabled={cartItems.length === 0}
               >
                 Secure Checkout
               </button>
-              
-              <Link 
-                href="/products" 
+
+              <Link
+                href="/products"
                 className="block text-center text-orange-300 hover:text-orange-400 underline"
               >
                 Continue Shopping
@@ -184,12 +187,12 @@ const CartPage = () => {
             <div className="mt-8 flex justify-center gap-4">
               <div className="text-orange-500">
                 <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
                 </svg>
               </div>
               <div className="text-orange-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
             </div>

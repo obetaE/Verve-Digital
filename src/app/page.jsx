@@ -154,7 +154,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="text-orange-300 text-lg mb-4">Newsletter</h4>
-              <div className="flex">
+              <div className="flex ">
                 <input type="email" placeholder="Your email" className="p-2 rounded-l-lg flex-1 bg-gray-700" />
                 <button className="bg-orange-600 px-4 py-2 rounded-r-lg hover:bg-orange-700">Subscribe</button>
               </div>
