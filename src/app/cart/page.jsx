@@ -170,19 +170,18 @@ const CartPage = () => {
 
             {/* Promo Code */}
             <div className="mt-8 pt-8 border-t border-orange-900/30">
-              <label className="block text-orange-200 mb-2">Promo Code</label>
-              <div className="flex gap-2">
-                <input
-                  type="text"
-                  className="flex-1 p-3 bg-gray-700 text-orange-100 rounded-lg"
-                  placeholder="Enter promo code"
-                />
-                <button className="bg-orange-900/30 text-orange-300 px-6 py-3 rounded-lg hover:bg-orange-900/40">
-                  Apply
-                </button>
-              </div>
+            <label className="block text-orange-200 mb-2">Promo Code</label>
+            <div className="flex flex-wrap gap-2">
+              <input
+                type="text"
+                className="flex-1 min-w-[200px] p-2 md:p-3 bg-gray-700 text-orange-100 rounded-lg text-sm md:text-base"
+                placeholder="Enter promo code"
+              />
+              <button className="bg-orange-900/30 text-orange-300 px-4 py-2 md:px-6 md:py-3 rounded-lg hover:bg-orange-900/40 w-full md:w-auto">
+                Apply
+              </button>
             </div>
-
+          </div>
             {/* Security Badges */}
             <div className="mt-8 flex justify-center gap-4">
               <div className="text-orange-500">
